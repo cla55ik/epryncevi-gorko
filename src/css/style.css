@@ -1,4 +1,4 @@
-
+@import '/src/css/animations.css';
 
 @font-face {
     font-family: 'RoundScript';
@@ -14,7 +14,16 @@
     font-style: normal;
 }
 
+.dev{
+    text-align: center;
+    margin-bottom: 15px;
+}
 
+.dev a{
+    color: #1a1d23;
+    text-decoration: none;
+    font-family: 'Roboto';
+}
 
 /*
 body{
@@ -65,7 +74,7 @@ body{
 }
 
 .brown{
-    color: #4A2E1F;
+    color: #D93D60;
 }
 
 .font-rs{
@@ -86,7 +95,8 @@ body{
 
 .white{
     background: rgba(255, 255, 255, 0.7);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+    box-shadow:0px 0px 10px rgba(154, 49, 22, .6);
 }
 
 /*END Variables*/
@@ -106,7 +116,7 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 25px;
-    border: 2px solid #4A2E1F;
+    border: 4px solid #EB626B;
     box-sizing: border-box;
 }
 
@@ -163,7 +173,7 @@ body{
 }
 
 .geo__map{
-    
+    box-shadow:0px 0px 10px rgba(154, 49, 22, .6);
     justify-content: flex-end;
     display: flex;
 }
@@ -331,7 +341,7 @@ body{
     .img__mob .border{
         align-items: center;
         padding: 10px;
-        border: 2px solid #4A2E1F;
+        border: 4px solid #EB626B;
         box-sizing: border-box;
     }
 
