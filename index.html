@@ -7,11 +7,20 @@
     <link rel="stylesheet" href="src/css/style.css" type="text/css"/>
     <link rel="icon" type="image/png" href="src/img/favicon.png" />
     <title>Свадьба Евгений & Наталья</title>
+    <meta property="og:title" content="Привет! Приглашаем на нашу свадьбу! Юуухуу"/>
+    <meta name="description" content="Наталия & Евгений" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://test.chelnokov.site/" />
+    <meta property="og:site_name" content="test.chelnokov.site" />
+    <meta property="og:image" content="http://test.chelnokov.site/src/img/img-og.jpg"/>
 </head>
 <body>
     <main class="main">
         <div class="header white">
             <div class="border dflex flex-wrap">
+                <div class="header__decor-round">
+                    <img src="/src/img/rose-round-res-min.png" alt="">
+                </div>
                 <div class="header__h1 ">
                     <h1 class="rs-46">Приглашение на&nbsp;свадьбу</h1>
                 </div>
@@ -23,7 +32,7 @@
                 </div>
             </div>
         </div>
-        <div class="date">
+        <div class="date" id="offset">
             <div class="date__description rs-46">
                 Приглашаем Вас на&nbsp;торжество, посвящённое нашему бракосочетанию
             </div>
@@ -32,18 +41,22 @@
             </div>
         </div>
         <div class="person hidden" id="person">
-            <img src="src/img/person.png" alt="">
+            <img src="src/img/person-wow-min.png" alt="">
         </div>
-        <div class="img__mob white">
+        <div class="img__mob white" >
             <div class="border">
+                <div class="img__mob-love hidden" id="love">
+                    <img src="src/img/love2.svg" alt="">
+                </div>
                 <div class="img__mob-img">
                     <img src="src/img/image.jpg" alt="">
                 </div>
                 
+                
             </div>
 
         </div>
-        <div class="geo dflex flex-wrap">
+        <div class="geo dflex flex-wrap" id="geo">
             <div class="geo__data">
                 <div class="geo__rest rs-46">
                     Сбор гостей состоится в&nbsp;ресторане «Чайка»
@@ -85,6 +98,23 @@
            document.getElementById('person').classList.toggle('hidden');
            
        }
+
+       let love = document.getElementById('love');
+       let elem = document.getElementById('offset');
+       let counter = 0;
+       document.onscroll = function(event){
+           let scroll = window.pageYOffset;
+           console.log('scroll = ' + scroll);
+           let offset = elem.offsetTop;
+           console.log(offset);
+
+           if (scroll > offset && counter == 0) {
+               love.classList.toggle('hidden');
+               counter = 1;
+           }
+           
+           console.log('counter = ' + counter);
+       };
     </script>
 </body>
 </html>
