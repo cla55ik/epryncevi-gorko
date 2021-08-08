@@ -191,6 +191,20 @@ body{
     margin-bottom: 100px;
 }
 
+.cats{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.cats img{
+    max-width: 40%;
+    height: auto;
+    object-fit: contain;
+    padding-left: 110px;
+}
+
+
+
 .person{
     text-align: center;
 }
@@ -199,6 +213,8 @@ body{
     width: auto;
     object-fit: contain;
 }
+
+
 
 .hidden{
     display: none;
@@ -299,6 +315,15 @@ body{
         display: block;
     }
 
+    .cats{
+        margin-bottom: 50px;
+    }
+    
+    .cats img{
+        max-width: 100%;
+        padding-left: 20px;
+    }
+
     .img__mob{
         padding: 20px;
     }
@@ -322,4 +347,6 @@ body{
         object-fit: cover;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     }
+
+    
 }
